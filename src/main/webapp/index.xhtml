@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>CDI Skeleton</title>
+    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/css/main.css"/>
+</h:head>
+<h:body>
+    <div>
+        <h:outputText>Welcome to StudyAtlas!</h:outputText>
+        <h:form>
+            <h:panelGroup rendered="#{test.name != null}">
+                <h:outputText value="Hello #{test.name}!"/>
+                <br/>
+            </h:panelGroup>
+            <h:inputText id="name" label="name" value="#{test.name}"/>
+            <h:commandButton value="Greet!" ajax="false"/>
+        </h:form>
+    </div>
+</h:body>
+</html>
